@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% if pdf_title %}{{ pdf_title }}{% else %}Invoice PDF{% endif %}</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header .title {
+            font-size: 24px;
+            color: #007cae;
+        }
+        .invoice-info {
+            margin-bottom: 30px;
+        }
+        .invoice-info label {
+            font-weight: bold;
+            width: 100px;
+            display: inline-block;
+        }
+        .invoice-details {
+            border-top: 1px solid #007cae;
+            padding-top: 10px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="title">Invoice #{{ invoice_number }}</div>
+    </div>
+
+    <div class="invoice-info">
+        <p><label>Bill to:</label> {{ customer_name }}</p>
+        <p><label>Amount:</label> {{ amount }}</p>
+        <p><label>Date:</label> {{ date }}</p>
+    </div>
+
+    <div class="invoice-details">
+        <p>Thank you for your business.</p>
+    </div>
+
+    <div class="footer">
+        Generated with Django + xhtml2pdf
+    </div>
+
+</body>
+</html>
