@@ -1,7 +1,7 @@
 # Django Lab 8: Relaciones, PDF y Emails
 
 Este proyecto corresponde al Laboratorio 8 del curso de Django, en el que se implementan las siguientes funcionalidades:
-
+* Sistema: Actividades 1 y 2
 ## Funcionalidades
 
 * Relación **uno a muchos** entre modelos (Curso - Estudiantes).
